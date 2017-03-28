@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"ODRTh3xaRR64wpeXJSlF33HMN-0/hMclyoGAuLxmkfwdATi8ksrD_Oc\"",
+ "etag": "\"ODRTh3xaRR64wpeXJSlF33HMN-0/6XP1hqU7gqoYdJkut5JohlAjHgk\"",
  "discoveryVersion": "v1",
  "id": "myApi:v1",
  "name": "myApi",
@@ -13,8 +13,8 @@
   "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
  },
  "protocol": "rpc",
- "rootUrl": "https://joke-telling-app-162713.appspot.com/_ah/api/",
- "rpcUrl": "https://joke-telling-app-162713.appspot.com/_ah/api/rpc",
+ "rootUrl": "https://udacity-build-it-bigger-162812.appspot.com/_ah/api/",
+ "rpcUrl": "https://udacity-build-it-bigger-162812.appspot.com/_ah/api/rpc",
  "rpcPath": "/_ah/api/rpc",
  "parameters": {
   "alt": {
@@ -82,8 +82,8 @@
   }
  },
  "methods": {
-  "myApi.getData": {
-   "id": "myApi.getData",
+  "myApi.getJoke": {
+   "id": "myApi.getJoke",
    "allowGet": true,
    "returns": {
     "$ref": "MyBean"

@@ -5,12 +5,14 @@ import java.util.Random;
 public class JokeProvider {
 
     private static final String[] jokes = {
-            "A SQL query goes into a bar, walks up to two tables and asks, 'Can I join you?'",
-            "How many programmers does it take to change a light bulb ? None, that's a hardware problem",
-            "Command line Russian roulette : [ $[ $RANDOM % 6 ] == 0 ] && rm -rf / || echo *Click*",
-            "In theory, there ought to be no difference between theory and practice. In practice, there is.",
-            "Why did the programmer quit his job? Because he didn't get arrays.",
-            "I � Unicode."
+            "Today a man knocked on my door and asked for a small donation towards the local swimming pool. I gave him a glass of water",
+            "My wife and I were happy for twenty years. Then we met.",
+            "A recent study has found that women who carry a little extra weight live longer than the men who mention it.",
+            "For Sale: Parachute. Only used once, never opened.",
+            "Born free, taxed to death.",
+            "As long as there are tests, there will be prayer in schools.",
+            "I say no to alcohol, it just doesn’t listen.",
+            "Whenever I find the key to success, someone changes the lock."
     };
 
     public static String getJoke(){

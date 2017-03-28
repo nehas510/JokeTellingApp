@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"ODRTh3xaRR64wpeXJSlF33HMN-0/hMclyoGAuLxmkfwdATi8ksrD_Oc\"",
+ "etag": "\"ODRTh3xaRR64wpeXJSlF33HMN-0/6XP1hqU7gqoYdJkut5JohlAjHgk\"",
  "discoveryVersion": "v1",
  "id": "myApi:v1",
  "name": "myApi",
@@ -13,9 +13,9 @@
   "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
  },
  "protocol": "rest",
- "baseUrl": "https://joke-telling-app-162713.appspot.com/_ah/api/myApi/v1/",
+ "baseUrl": "https://udacity-build-it-bigger-162812.appspot.com/_ah/api/myApi/v1/",
  "basePath": "/_ah/api/myApi/v1/",
- "rootUrl": "https://joke-telling-app-162713.appspot.com/_ah/api/",
+ "rootUrl": "https://udacity-build-it-bigger-162812.appspot.com/_ah/api/",
  "servicePath": "myApi/v1/",
  "batchPath": "batch",
  "parameters": {
@@ -84,8 +84,8 @@
   }
  },
  "methods": {
-  "getData": {
-   "id": "myApi.getData",
+  "getJoke": {
+   "id": "myApi.getJoke",
    "path": "mybean",
    "httpMethod": "GET",
    "response": {
