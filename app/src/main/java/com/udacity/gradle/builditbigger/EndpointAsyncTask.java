@@ -1,10 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 
-import com.example.neha.displayjokeactivity.DisplayJokeActivity;
 import com.example.neha.myapplication.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -17,11 +14,11 @@ import java.io.IOException;
 
 public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
         private static MyApi myApiService = null;
-        private Context context;
+        private OnTaskCompleted done;
 
 
-    public EndpointAsyncTask(Context mContext){
-        context = mContext;
+    public EndpointAsyncTask(OnTaskCompleted taskDone){
+        this.done = taskDone;
     }
 
 
@@ -46,10 +43,7 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
 
         @Override
         protected void onPostExecute(String result) {
-            Intent intent = new Intent(context, DisplayJokeActivity.class);
-
-            intent.putExtra(DisplayJokeActivity.JOKE_KEY, result);
-            context.startActivity(intent);
+          done.onTaskCompleted(result);
         }
     }
 

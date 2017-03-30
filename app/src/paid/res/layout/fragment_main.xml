@@ -19,9 +19,9 @@
         android:textColor="@android:color/holo_green_dark" />
 
     <ImageButton
+        android:id="@+id/tellJokeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/instructions_text_view"
-        android:onClick="showJoke"
         android:background="@drawable/emoticons" />
 </RelativeLayout>
