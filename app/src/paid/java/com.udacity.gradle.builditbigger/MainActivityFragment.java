@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 
 import com.example.neha.displayjokeactivity.DisplayJokeActivity;
 
@@ -16,6 +17,7 @@ import com.example.neha.displayjokeactivity.DisplayJokeActivity;
  */
 public class MainActivityFragment extends Fragment implements OnTaskCompleted{
 ImageButton tellJoke;
+    ProgressBar spinner;
     public MainActivityFragment() {
     }
 
@@ -25,6 +27,8 @@ ImageButton tellJoke;
         View root = inflater.inflate(R.layout.fragment_main, container, false);
 
         tellJoke = (ImageButton) root.findViewById(R.id.tellJokeButton);
+        spinner = (ProgressBar) root.findViewById(R.id.loadingSpinner);
+        spinner.setVisibility(View.GONE);
 
         tellJoke.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,15 +41,19 @@ ImageButton tellJoke;
 
 
     public void showJoke() {
+
                 EndpointAsyncTask endpointAsyncTask = new EndpointAsyncTask(this);
                 endpointAsyncTask.execute();
+        spinner.setVisibility(View.VISIBLE);
             }
 
     @Override
     public void onTaskCompleted(String data) {
         Intent intent = new Intent(getActivity(), DisplayJokeActivity.class);
         intent.putExtra(DisplayJokeActivity.JOKE_KEY, data);
+        spinner.setVisibility(View.VISIBLE);
         startActivity(intent);
+        spinner.setVisibility(View.GONE);
 
     }
 }

@@ -24,4 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/instructions_text_view"
         android:background="@drawable/emoticons" />
+
+    <ProgressBar
+        android:id="@+id/loadingSpinner"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
