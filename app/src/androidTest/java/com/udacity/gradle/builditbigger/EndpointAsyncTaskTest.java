@@ -1,36 +1,28 @@
 package com.udacity.gradle.builditbigger;
 
-import android.support.test.runner.AndroidJUnit4;
-import android.util.Log;
-
 import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 /**
- * Created by neha on 3/30/17.
+ * Created by neha on 3/31/17.
  */
-
-@RunWith(AndroidJUnit4.class)
 public class EndpointAsyncTaskTest {
+
+
     @Test
     public void doInBackground() throws Exception {
 
-        try {
-            MainActivity mainActivity = new MainActivity();
-            EndpointAsyncTask endpointsAsyncTask = new EndpointAsyncTask(mainActivity);
-            endpointsAsyncTask.execute();
-            String result = endpointsAsyncTask.get(30, TimeUnit.SECONDS);
+       EndpointAsyncTask testTask = new EndpointAsyncTask(new EndpointAsyncTask.OnTaskCompleted() {
+           @Override
+           public void onTaskCompleted(String data) {
 
-            assertNotNull(result);
-            assertTrue(result.length() > 0);
-        } catch (Exception e){
-            Log.e("EndpointAsyncTaskTest", "DoInBackground: Timed out");
-        }
+           }
+       });
+
+        testTask.execute();
+        String showJoke = testTask.get();
+        assertNotNull(showJoke);
 
     }
 

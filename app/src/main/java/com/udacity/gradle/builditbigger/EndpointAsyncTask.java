@@ -16,6 +16,10 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
         private static MyApi myApiService = null;
         private OnTaskCompleted done;
 
+    public interface OnTaskCompleted {
+
+        void onTaskCompleted(String data);
+    }
 
     public EndpointAsyncTask(OnTaskCompleted taskDone){
         this.done = taskDone;

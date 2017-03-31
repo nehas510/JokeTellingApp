@@ -15,7 +15,7 @@ import com.example.neha.displayjokeactivity.DisplayJokeActivity;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment extends Fragment implements OnTaskCompleted{
+public class MainActivityFragment extends Fragment implements EndpointAsyncTask.OnTaskCompleted{
 ImageButton tellJoke;
     ProgressBar spinner;
     public MainActivityFragment() {
